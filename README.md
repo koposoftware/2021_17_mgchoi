@@ -11,18 +11,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 따라서, 하나FUN은 MZ세대 온라인 영상 시청 트렌드를 반영한 라이브커머스, 경험소비와 재미를 중요시하는 MZ세대를 위한 FUN요소를 결합해 빠르게 변화하는 MZ세대를 공략하는 적금상품입니다.
 
 
-# 2. 프로젝트 제안서
-
-초기 하나 스톡시그널의 주제 선정 및 제안 발표 자료입니다.
-   
-   <img src="cover.jpg" width="640" /><br>
-   [제안발표자료](/스톡시그널_제안발표.pptx)<br><br>
-   초기 목업 화면입니다.<br>
-   <img src="demopage.jpg" width="640" /><br><br>
-   주제 제안발표 영상입니다.<br>
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/sggIi6EwXP8" frameborder="0"></iframe>
-
-# 3. 프로젝트 결과
+# 2. 프로젝트 결과
 최종 프로젝트 결과입니다.
 
 ## * 발표 ppt 
@@ -33,7 +22,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 
    <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/watch?v=lnKLZfgSPWQ&ab_channel=%EC%B5%9C%EB%AF%BC%EA%B8%B0" frameborder="0"></iframe>
 
-# 4. 프로젝트 결과 요약
+# 3. 프로젝트 결과 요약
 
 ## * 수행기간
    2021-09-06 ~ 2021-10-05
@@ -78,7 +67,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 2. 개발하던 노트북에서 미디어 서버와 톰캣 서버를 같이 돌렸을 때, 서버 최대 수용인원은 느리더라도 20명정도 까지 가능했습니다. 이후에는 1:N 통신에서 새로운 아키텍처를 적용해서 100명, 200명 등 더 많은 사람들을 수용할 수 있는 라이브커머스를 구현해 보고 싶습니다.
 
 
-# 5. 본인 소개
+# 4. 본인 소개
 
 |이름 |최민기|![mgChoi](/mypic.jpg)|
 |연락처 | cmg321(@)naver.com|
