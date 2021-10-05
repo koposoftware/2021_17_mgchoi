@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="saving.SavingDAO"><!--  패키지명(fullname) 적어도 됨 // 보통 적는 것이 보편적-->
+			
+			
+	<insert id="create" parameterType="savingVO">
+		insert into saving(saving_pk, fun_member_pk, savingnum, savingpwd, savingbalance, 
+		savingname, input_date, savinginterest, saving_duedate, account_pk)
+		values (saving_seq.nextval, #{fun_member_pk}, #{savingnum}, #{savingpwd}, #{savingbalance},
+			#{savingname}, to_date(sysdate, 'YY/MM/DD'), #{savinginterest}, #{saving_duedate},
+			#{account_pk})
+	</insert>
+	
+	<select id="obtainSavingDetailVO" parameterType="int" resultType="savingdetailVO">
+		select saving_pk, first_status, second_status, third_status, four_status,
+				five_status, six_status
+		from saving_detail
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectAllSavingLog" parameterType="int" resultType="savinglogVO">
+			select saving_log_pk, saving_pk, saving_change, saving_task, saving_date, saving_category 
+			from saving_log
+			where saving_pk = #{saving_pk}
+			order by saving_date desc
+	</select>
+	
+	<select id="searchAllByMemberPk" parameterType="int" resultType="savingVO">
+		select saving_pk, fun_member_pk, savingnum, savingpwd, savingbalance,
+				savingname, input_date, savinginterest, saving_duedate, account_pk
+				
+		from saving
+		where fun_member_pk = #{member_pk}
+	</select>
+	
+	<insert id="addSavingLog" parameterType="savingVO">
+		insert into saving_log (saving_log_pk, saving_pk, saving_change, saving_task, saving_date, saving_category) 
+		values (saving_log_seq.nextval, #{saving_pk}, #{savingbalance}, '입금', to_date(sysdate, 'YY/MM/DD'), '기타이체')
+	</insert>
+	
+	<insert id="addSavingDetail" parameterType="savingVO">
+		insert into saving_detail(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<select id="obtainSavingVO" parameterType="savingVO" resultType="savingVO">
+		select saving_pk, savingnum, savingpwd, savingbalance, savingname, input_date, saving_duedate,
+		account_pk, savinginterest 
+		from saving
+		where savingnum = #{savingnum}
+	</select>
+	
+	<select id="obtainSavingVOByMem" parameterType="int" resultType="savingVO">
+		select saving_pk, fun_member_pk, savingnum, savingpwd, savingbalance, savingname, 
+		input_date, saving_duedate, account_pk, savinginterest 
+		from saving
+		where fun_member_pk = #{fun_member_pk}
+	</select>
+	
+	<update id="updateSavingDetailVO" parameterType="savingdetailVO">
+		update saving_detail
+		set first_status = #{first_status}, 
+			second_status = #{second_status}, 
+			third_status = #{third_status},
+			four_status = #{four_status}, 
+			five_status = #{five_status}, 
+			six_status = #{six_status}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<select id="obtainSavingDetailList" resultType="savingdetailVO">
+		select saving_pk, first_status, second_status, third_status, four_status, five_status, six_status
+		from saving_detail
+	</select>
+	
+	<select id="obtainSavingVODay" parameterType="int" resultType="savingVO">
+		select saving_pk, fun_member_pk, savingnum, savingpwd, savingbalance,
+		savingname, input_date, saving_duedate, account_pk, savinginterest
+		from saving
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<update id="dayChange" statementType="CALLABLE" parameterType="savingVO">
+		{call day_up(
+			
+				#{saving_pk},
+				#{fun_member_pk}
+		
+			)
+		}
+	</update>
+	
+	<update id="dayPayChange" statementType="CALLABLE" parameterType="savingVO">
+		{call day_up_pay(
+			
+				#{saving_pk},
+				#{fun_member_pk}
+		
+			)
+		}
+	</update>
+	
+	<update id="dayChangeWeek" statementType="CALLABLE" parameterType="savingVO">
+		{call week_up_week(
+			
+				#{saving_pk},
+				#{fun_member_pk}
+		
+			)
+		}
+	</update>
+	
+	<update id="updateWeekVO" parameterType="weekVO">
+		update saving_detail
+		set first_status = 0
+		where saving_pk = ${saving_pk}
+	</update>
+	
+	<update id="daySanChange" parameterType="savingVO">
+		{call san_up_day(
+			
+				#{saving_pk},
+				#{fun_member_pk}
+		
+			)
+		}
+	</update>
+	
+	<select id="obtainFunPk" parameterType="savingVO" resultType="int">
+		select account_pk
+		from saving
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="obtainYesterDaySum" parameterType="int" resultType="int">
+		select sum(p_account_log.change) 
+		from p_account_log
+		where input_date = to_char(sysdate-1, 'YY/MM/DD') and fun_account_pk = #{fun_pk};
+	</select>
+	
+	<select id="obtainAccVO" parameterType="int" resultType="accountVO">
+		select fun_account_pk, fun_member_pk, fun_account_balance, fun_account_pwd,  
+               fun_account_name, fun_account_num, fun_account_reg_date
+        from fun_account
+        where fun_account_pk = #{account_pk}
+	</select>
+	
+	<update id="dayChangeSan" parameterType="savingVO">
+		{call san_up_day(
+			
+				#{saving_pk},
+				#{fun_member_pk},
+				#{savingbalance}
+		
+			)
+		}
+	</update>
+	
+	
+	
+</mapper>

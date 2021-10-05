@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="status.StatusDAO"><!--  패키지명(fullname) 적어도 됨 // 보통 적는 것이 보편적-->
+			
+	<insert id="addTargetBan" parameterType="savingVO">
+		insert into target_ban(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<insert id="addTargetGwa" parameterType="savingVO">
+		insert into target_gwa(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<insert id="addTargetPay" parameterType="savingVO">
+		insert into target_pay(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<insert id="addTargetSan" parameterType="savingVO">
+		insert into target_san(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<insert id="addTargetSlow" parameterType="savingVO">
+		insert into target_slow(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<insert id="addTargetWeek" parameterType="savingVO">
+		insert into target_week(saving_pk) values(#{saving_pk})
+	</insert>
+	
+	<update id="updateTargetWeek" parameterType="weekVO">
+		update target_week
+		set target_week_date = #{target_week_date},
+			target_week_balance = #{target_week_balance},
+			target_week_stop = #{target_week_stop},
+			target_week_now = #{target_week_now}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<update id="updateTargetSlow" parameterType="slowVO">
+		update target_slow
+		set target_slow_date = #{target_slow_date},
+			target_slow_balance = #{target_slow_balance}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<update id="updateTargetPay" parameterType="payVO">
+		update target_pay
+		set target_pay_date = #{target_pay_date},
+			target_pay_balance = #{target_pay_balance},
+			target_pay_rate = #{target_pay_rate}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<update id="updateTargetBan" parameterType="banVO">
+		update target_ban
+		set target_ban_gob = #{target_ban_gob}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<update id="updateTargetGwa" parameterType="gwaVO">
+		update target_gwa
+		set target_gwa_category = #{target_gwa_category},
+			target_gwa_cnt = #{target_gwa_cnt},
+			target_gwa_balance = #{target_gwa_balance}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<update id="updateTargetSan" parameterType="sanVO">
+		update target_san
+		set target_san_date = #{target_san_date},
+			target_san_balance = #{target_san_balance}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<select id="selectWeekStatus" parameterType="int" resultType="weekVO">
+		select target_week_date, target_week_balance, target_week_stop, target_week_now, saving_pk
+		from target_week
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectSlowStatus" parameterType="int" resultType="slowVO">
+		select target_slow_date, target_slow_balance, saving_pk
+		from target_slow
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectPayStatus" parameterType="int" resultType="payVO">
+		select target_pay_date, target_pay_balance, target_pay_rate, saving_pk
+		from target_pay
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectBanStatus" parameterType="int" resultType="banVO">
+		select target_ban_gob, saving_pk
+		from target_ban
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectGwaStatus" parameterType="int" resultType="gwaVO">
+		select target_gwa_category, target_gwa_balance, target_gwa_cnt, saving_pk
+		from target_gwa
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="selectSanStatus" parameterType="int" resultType="sanVO">
+		select target_san_date, target_san_balance, saving_pk
+		from target_san
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	
+</mapper>
