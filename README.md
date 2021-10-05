@@ -52,13 +52,13 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 - Library : jQuery, JSTL, Bootstrap-4.3.1
 
 ## * 시스템 아키텍쳐
-   <img src="시스템아키텍처.jpg" width="640" />
+   <img src="./architecture.png" width="640" />
    
 ## * ERD
-   <img src="erd.png" width="640" />
+   <img src="./erd.png" width="640" />
 
 ## * 서비스 구성도
-   <img src="architecture.png" width="640" />
+   <img src="./architecture.png" width="640" />
 
 ## * 보완점
 1. 게임공학에 관심이 있어서 게임으로써 금융을 재밌게 표현하려고 노력했지만, 생각했던 것 보다 재밌지 않은 것 같아 아쉬웠습니다. WEB GL과 Three.js 등 다양한 언어 및 라이브러리를 사용하여 전체적인 게임 구조를 3D 그래픽 렌더링을 통해 더욱 재밌는 서비스를 개발해보고 싶습니다. 또한, 미래에 중심으로 들어설 메타버스라는 채널에 이번 프로젝트를 적용하고 싶다는 목표도 생겼습니다.
