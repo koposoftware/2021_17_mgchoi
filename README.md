@@ -34,29 +34,28 @@
    2021-09-06 ~ 2021-10-05
 
 ## * 담당업무
-   하나 스톡시그널 프로젝트 설계 및 제작, Front-End/Back-End 개발
+   하나FUN 프로젝트 설계 및 제작, Front-End/Back-End 개발
 
 ## * 주요기능
    <img src="기능.jpg" width="640" />
 
 ## * 사용기술
 - Spring-MVC 패턴
-- In-Memory Database(HyperSQL)을 사용하여 실시간 데이터 적재
-- Rule-based expert system
-- R과 Spring 연동(arules 패키지를 통한 연관성 분석)
-- Web-Socket을 활용한 알림기능
-- Spring MailSender, CoolSMS API를 사용한 이메일, 문자 알림
-- Spring Scheduler와 Spring Jsoup을 활용한 지표데이터 Batch처리
-- jQuery-UI를 활용하여 사용자 정의 커스텀 페이지 기능 구현
+- Scheduler를 활용한 반복적인 작업 및 시간에 따른 이벤트 처리
+- WebRTC를 활용하여 라이브커머스 및 채팅 구현
+- JSOUP을 활용하여 게임 뉴스카드 데이터 크롤링
+- SMS/KAKAO API를 활용하여 가입 알림 및 목표 공유
+- JavaScript & Css 라이브러리를 활용하여 게임 및 룰렛 구현
+- Spring Security(BCrypt)를 활용하여 비밀번호 암호화
 
 ## * 개발환경
-- OS : Window10, Linux CentOS7
+- OS : Window10
 - Framework : Spring Framework 4, Mybatis
 - Server : Apache Tomcat9
-- Language : Java(jdk-1.8), Javascript, HTML, CSS, R
-- IDE Tools : Eclipse, Sqldeveloper, R-studio
-- DB : Oracle 11g, HyperSQL 2.5.0
-- Library : jQuery, iQuery-UI, JSTL, Bootstrap-4.3.1
+- Language : Java(jdk-1.8), Javascript, HTML, CSS
+- IDE Tools : Eclipse, Sqldeveloper, Visual Studio Code
+- DB : Oracle 11g
+- Library : jQuery, JSTL, Bootstrap-4.3.1
 
 ## * 시스템 아키텍쳐
    <img src="시스템아키텍처.jpg" width="640" />
@@ -82,10 +81,9 @@
 
 # 5. 본인 소개
 
-|이름 |황준호|![jhHwang](/mypic.jpg)|
-|연락처 | luffy333(@)naver.com|
+|이름 |최민기|![mgChoi](/mypic.jpg)|
+|연락처 | cmg321(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
-| | Backend - Java, Spring, Oracle, HSQL|
+| | Backend - Java, Spring, Oracle|
 | | Etc - R, Git|
-|경력사항| 한국정보화진흥원 공공데이터 품질개선 업무 인턴 |
 |특기사항| 배운 내용 다른 사람에게 설명하고 공유하기 |
