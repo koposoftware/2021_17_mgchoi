@@ -18,8 +18,8 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
    [최종발표자료](./최종PPT.pptx)<br>
 
 ## * 시연 동영상 
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/lnKLZfgSPWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
+   [![영상](thumb02.jpg)](https://www.youtube.com/embed/lnKLZfgSPWQ)
 
 # 3. 프로젝트 결과 요약
 
@@ -65,6 +65,8 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 
 # 4. 본인 소개
 
+|항목|내용||
+|-----|---------------------------|----|
 |이름 |최민기|![mgChoi](./my.png)|
 |연락처 | cmg321(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
