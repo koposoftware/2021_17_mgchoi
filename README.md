@@ -1,4 +1,4 @@
-# 친절한 거시경제지표 서비스 - 하나 스톡시그널
+# 쉽고 재미있는 저축 - 하나FUN
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2021_19_jhhwang/](https://koposoftware.github.io/2021_19_jhhwang/)
 
