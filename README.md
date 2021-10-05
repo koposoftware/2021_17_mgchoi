@@ -61,7 +61,7 @@
    <img src="시스템아키텍처.jpg" width="640" />
    
 ## * ERD
-   <img src="ERD.jpg" width="640" />
+   <img src="erd.png" width="640" />
 
 ## * 서비스 구성도
    <img src="서비스아키텍처.jpg" width="640" />
