@@ -45,7 +45,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 ## * 개발환경
 - OS : Window10
 - Framework : Spring Framework 4, Mybatis
-- Server : Apache Tomcat9
+- Server : Apache Tomcat9, NodeJS 서버
 - Language : Java(jdk-1.8), Javascript, HTML, CSS
 - IDE Tools : Eclipse, Sqldeveloper, Visual Studio Code
 - DB : Oracle 11g
@@ -66,9 +66,9 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 
 # 4. 본인 소개
 
-|이름 |최민기|![mgChoi](/mypic.jpg)|
+|이름 |최민기|![mgChoi](./mypic.jpg)|
 |연락처 | cmg321(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
-| | Etc - R, Git|
-|특기사항| 배운 내용 다른 사람에게 설명하고 공유하기 |
+| | Etc - Git|
+|특기사항| 서로 지식을 공유하며  |
