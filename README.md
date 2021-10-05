@@ -19,7 +19,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 
 ## * 시연 동영상 
 
-   <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/watch?v=lnKLZfgSPWQ&ab_channel=%EC%B5%9C%EB%AF%BC%EA%B8%B0" frameborder="0"></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/lnKLZfgSPWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # 3. 프로젝트 결과 요약
 
