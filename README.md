@@ -66,9 +66,9 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
 
 # 4. 본인 소개
 
-|이름 |최민기|![mgChoi](./mypic.jpg)|
+|이름 |최민기|![mgChoi](./my.png)|
 |연락처 | cmg321(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
 | | Etc - Git|
-|특기사항| 서로 지식을 공유하며  |
+|특기사항| 서로 지식을 공유하며 학습하기|
