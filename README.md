@@ -42,7 +42,7 @@ MZ세대는 자기중심적 소비, 디지털 네이티브, 재미를 추구하�
    하나FUN 프로젝트 설계 및 제작, Front-End/Back-End 개발
 
 ## * 주요기능
-   <img src="기능.jpg" width="640" />
+   <img src="function.png" width="640" />
 
 ## * 사용기술
 - Spring-MVC 패턴
