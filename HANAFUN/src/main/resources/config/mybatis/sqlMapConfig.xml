@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.member.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.SavingVO" alias="savingVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.AccountVO" alias="accountVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.WishVO" alias="wishVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.SavingDetailVO" alias="savingdetailVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.SavingLogVO" alias="savinglogVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetWeekVO" alias="weekVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetSlowVO" alias="slowVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetPayVO" alias="payVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetBanVO" alias="banVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetGwaVO" alias="gwaVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.TargetSanVO" alias="sanVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.GameInfoVO" alias="gameinfoVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.GameCardVO" alias="gamecardVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.FileVO" alias="fileVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.ShareObjectVO" alias="objectshareVO"/>
+		<typeAlias type="kr.ac.kopo.totalvo.ObjectReVO" alias="objectreVO"/>
+	</typeAliases>
+
+</configuration>

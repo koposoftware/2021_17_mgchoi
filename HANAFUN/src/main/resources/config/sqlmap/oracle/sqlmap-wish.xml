@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wish.WishDAO"><!--  패키지명(fullname) 적어도 됨 // 보통 적는 것이 보편적-->
+			
+			
+	<insert id="addWish" parameterType="wishVO">
+		insert into wish(wish_pk, saving_pk, wish_name, p_file_id, target_price, duration, status) 
+		values(wish_seq.nextval, #{saving_pk}, #{wish_name}, #{p_file_id}, #{target_price}, #{duration}, #{status})
+	</insert>
+	
+	<select id="searchAllBySavingPk" parameterType="int" resultType="wishVO">
+		select wish_pk, saving_pk, wish_name, p_file_id, target_price, duration, start_date, status 
+		from wish
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="obtainCnt" resultType="int" parameterType="int">
+		select count(*) 
+		from wish
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<insert id="addShareVO" parameterType="objectshareVO">
+		insert into share_object(object_share_pk, name, object_name, percent, 
+		object_price, p_file_id)
+		values(share_object_seq.nextval, #{name}, #{object_name},
+			 #{percent}, #{object_price}, #{p_file_id})
+	</insert>
+	
+	<select id="obtainShareObjectList" resultType="objectshareVO">
+		select object_share_pk, name, object_name, percent, object_price, p_file_id
+		from share_object
+		order by object_share_pk desc
+	</select>
+	
+	<select id="obtainReply" resultType="objectreVO">
+		select object_re_pk, object_share_pk, object_re_name, object_re_text
+			from object_re 
+			order by object_re_pk desc
+	</select>
+	
+	<insert id="addReply" parameterType="objectreVO">
+		insert into object_re(object_re_pk, object_share_pk, object_re_name, object_re_text)
+			values(object_re_seq.nextval, #{object_share_pk}, #{object_re_name}, #{object_re_text})
+	</insert>
+	
+	<update id="addCoin" parameterType="int">
+		update fun_member
+		set coin = coin + 1
+		where fun_member_pk = #{pk}
+	</update>
+
+
+</mapper>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="game.GameDAO"><!--  패키지명(fullname) 적어도 됨 // 보통 적는 것이 보편적-->
+			
+			
+	<insert id="addGameInfo" parameterType="savingVO">
+		insert into gameinfo (saving_pk) values ( #{saving_pk} )
+	</insert>
+	
+	<select id="obtainGameInfoVOByPk" parameterType="savingVO" resultType="gameinfoVO">
+		select saving_pk, game_lv, coin, cnt, game_cash, max_game_cash
+		from gameinfo
+		where saving_pk = #{saving_pk}
+	</select>
+	
+	<select id="SelectAllCard" resultType="gamecardVO">
+		select game_card_pk, game_card_title, game_card_type, game_card_url, game_card_up_down
+		from game_card
+		order by DBMS_RANDOM.RANDOM
+	</select>
+	
+	<update id="updateGameInfo" parameterType="gameinfoVO">
+		update gameinfo
+		set game_lv = #{game_lv},
+			cnt = 0,
+			coin = #{coin},
+			game_cash = #{game_cash},
+			max_game_cash = #{max_game_cash}
+		where saving_pk = #{saving_pk}
+	</update>
+	
+	<select id="obtainGameInfoVORank" resultType="gameinfoVO">
+		select saving_pk, game_lv, coin, cnt, game_cash, max_game_cash
+		from gameinfo
+		order by max_game_cash desc
+	</select>
+	
+	<select id="obtainMemberName" resultType="String" parameterType="int">
+		select name from fun_member 
+		where fun_member_pk = (select fun_member_pk from saving where saving_pk = #{saving_pk})
+	</select>
+	
+	<select id="obtainTotalCount" resultType="int">
+		 select count(*) from gameinfo
+	</select>
+	
+	<select id="obtainRank" resultType="int" parameterType="int">
+		 select rank() over ( order by game_cash desc ) rank
+			from GAMEINFO where saving_pk = #{saving_pk}
+	</select>
+</mapper>

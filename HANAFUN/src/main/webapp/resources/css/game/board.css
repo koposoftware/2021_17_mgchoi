@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+/* �˸�â���� ��Ÿ�� */
+.noborder{
+	border: none !important;
+}
+.noborder:hover{
+	background: none !important;
+	box-shadow: none !important;
+}
+
+/* board style */
+.boaard_floor {
+	margin:none !important;
+	background: #996633;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.game-board{
+	display:block;
+	padding-top:none !important;
+	margin-top:none !important;
+	padding-left:5%;
+	height: 100%;
+	display:block;
+}
+.marble_board {
+	background-image: url("../../img/board/board.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	border-radius: 20px;
+	padding-bottom:1px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+	background-color: #409400;
+	width: 1140px;
+}
+.chose_place{
+	background-image: url("../images/board/board.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	border-radius: 20px;
+	padding-bottom:1px; 
+	background-color: #409400;
+	width: 1140px;
+}
+.on-game-board{
+	display: none;
+}
+.game_description{
+	background: rgba(0,0,0,0.9) !important;
+	border-radius: 20px;
+}
+/* 우주여행 선택 스타일 */
+.chose_place td:hover{ 
+	background: rgba(64, 148, 0, 0.2); 
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5) !important; 
+	cursor: pointer;
+}
+
+/* ����� ��� ���� */
+.in_middle{
+	text-align:center;
+	padding-top:5%;
+}
+
+
+/* ���� �� ��Ÿ�� */
+.horses{
+	font-size: 3em;
+	text-shadow: 0px 0px 10px rgba(51, 51, 0);
+	cursor: pointer;
+}
+
+/* ���� ������ ��Ÿ�� */
+td{
+	word-break:break-all;
+}
+td:hover  {
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+	background: rgba(102, 255, 255, 0.1);
+	border-radius: 13px;
+}
+.td_tb{
+	padding-top: 5px !important;
+}
+.td_rl{
+	padding-top: 10px !important;
+}
+.no_border {
+	border: none !important;
+}
+.no_hover{
+	visibility: hidden;
+}
+.list-margin{
+	margin: 4px;
+	width: 88%;
+}
+
+
+/* ���� ��Ȳ ����� ��Ÿ��  */
+.interface{
+	margin : 0px; 
+	padding : 0px;
+	float: right;
+	background: rgba(0,0,0,0.75);
+	width: 24%;
+	text-align: center;
+	border-radius: 15px 0px 0px 15px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+div.interface:hover {
+	/* margin-top : 6.8%; */
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+	/* width: 25%; */
+}
+
+/* �۲� �� ���� ���� */
+html,body{
+	font-family: 'Noto Sans KR', sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+/* �ؽ�Ʈ �� ��Ÿ��*/
+.text-danger{
+	color:tomato;
+}
+.text-dark{
+	color:#222222;
+}
+.text-warning{
+	color:orange;
+}
+.bold{
+	font-weight: bold;
+}
+
+/* �⺻ ��� ��Ÿ��*/
+ul{
+	list-style: none;
+}
+::selection {
+	background: #BFD641;
+	color: 	#000;
+}
+
+.btns_w_mar{
+	margin-right: 10px;
+}
