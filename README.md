@@ -1,6 +1,6 @@
 # 쉽고 재미있는 저축 - 하나FUN
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/2021_19_jhhwang/](https://koposoftware.github.io/2021_19_jhhwang/)
+[프로젝트 홈페이지 - https://koposoftware.github.io/2021_17_mgchoi/](https://koposoftware.github.io/2021_17_mgchoi/)
 
 # 1. 프로젝트 개요
 
